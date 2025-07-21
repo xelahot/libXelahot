@@ -21,3 +21,9 @@ libXelahot_INSTALL_PATH = /usr/lib
 libXelahot_EXTRA_FRAMEWORKS = CydiaSubstrate
 
 include $(THEOS_MAKE_PATH)/library.mk
+
+after-stage::
+	@echo "Applying permissions..."
+	find $(THEOS_STAGING_DIR) -type f -exec chmod 644 {} \;
+	find $(THEOS_STAGING_DIR) -type f \( -name 'postinst' -o -name 'prerm' \) -exec chmod 755 {} \;
+	find $(THEOS_STAGING_DIR) -type d -exec chmod 755 {} \;
