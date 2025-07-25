@@ -9,8 +9,8 @@ static bool showPopups = true;
 static NSMutableArray *alertsQueue = [NSMutableArray new];
 static UIWindow *topAlertWindow;
 NSString *const springboardBundleId = @"com.apple.springboard";
-NSString *const preferencesPlistsFolder = @"/var/jb/var/mobile/Library/Preferences";
-NSString *const applicationSupport = @"/var/jb/Library/Application Support";
+NSString *const preferencesPlistsFolder = @"/var/mobile/Library/Preferences";
+NSString *const applicationSupport = @"/Library/Application Support";
 
 @interface NSDistributedNotificationCenter : NSNotificationCenter
 @end

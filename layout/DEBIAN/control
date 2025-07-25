@@ -1,7 +1,7 @@
 Package: com.xelahot.libxelahot
 Name: libXelahot
 Version: 1.0.0
-Architecture: iphoneos-arm64
+Architecture: iphoneos-arm
 Description: An iOS library for jailbroken devices used in my tweaks
 Maintainer: Xelahot
 Author: Xelahot

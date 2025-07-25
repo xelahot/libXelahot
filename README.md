@@ -5,7 +5,7 @@ A library for Xelahot's iOS tweaks. It contains reusable stuff.
 ---
 ## ✔️ Compatibility
 
-- Should work at least on iOS 15–18 (only tested on Dopamine 2.0 / rootless jailbreak on iOS 16.5 and on iOS 18.3.2, embedded in a custom IPA)
+- Should work at least on iOS 14–18
 
 ## ⚙️ How to Install
 ### Jailbroken device:
@@ -32,10 +32,8 @@ You must make a custom IPA of the app of you want to use a tweak that depends on
 - Add the "libXelahot.dylib" file from the releases of this repository to your Theos "$(THEOS)/lib/iphone/rootless/libXelahot.dylib" folder
 
 ### Extra steps specific to rootful jailbreak environments:
-- Remove the "/var/jb/" prefix in those variables of "Utils/XelaUtils.xm": preferencesPlistsFolder, applicationSupport
 - Add the "libXelahot.dylib" file from the releases of this repository to your Theos "$(THEOS)/lib/libXelahot.dylib" folder (I'm not sure about this, it may be "$(THEOS)/lib/iphone/libXelahot.dylib")
-- Edit the "layout/DEBIAN/control" file and use "Architecture: iphoneos-arm"
-- Remove "THEOS_PACKAGE_SCHEME = rootless" from the Makefile
+- Use the master-rootful-jb branch
 
 ## ⌨️ How to Use/Code
 Since some methods must be executed from the SpringBoard, the tweak that depends libXelahot should inject into it. The library contains useful functions and can be used with inter-process communication (IPC) by sending/receiving notifications. Basically, you can post a notification from a process (ex: the app), listen to it on the other (ex: the SpringBoard) or the opposite.
